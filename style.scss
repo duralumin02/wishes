@@ -1,0 +1,216 @@
+@import "./node_modules/locomotive-scroll/dist/locomotive-scroll.min.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cannia,sans-serif;
+}
+
+body{
+  background-color: #dfdfdf;
+}
+
+.grid-img{
+  display: grid;
+  grid-template-columns: 50% auto;
+  height: 100vh;
+
+  img{
+    width: 100%;
+    height: 670px;
+    object-fit: cover;
+  }
+}
+
+.intro-text{
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 100vh;
+  padding: 20px;
+
+  h1{
+    font-size: 2em;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+  small{
+    color: #e63946;
+    font-weight: bold;
+  }
+}
+
+.wishes-container{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  .wishes-text{
+    display: inline-block;
+
+    span{
+      display: inline-block;
+      font-size: 10em;
+    }
+  }
+}
+
+.dummy-text{
+  margin: 20vh 0vh;
+  text-align: center;
+
+  p{
+    font-size: 5em;
+    font-weight: bolder;
+  }
+}
+
+.stuck{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40% auto;
+
+  h1{
+    font-size: 14em;
+    line-height: 20%;
+    margin-top: 10vh;
+  }
+  p{
+    font-size: 7em;
+    margin-top: 12vh;
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+    margin-top: 16px;
+    padding: 0 8px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      max-height: 75vh;
+      object-fit: cover;
+      align-self: stretch;
+    }
+  }
+}
+
+
+.footer{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.36fr 2fr;
+  text-align: center;
+  position: relative;
+  .footer-img{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .footer-text{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+
+    span{
+      color: #e63946;
+    }
+    h2{
+      margin-bottom: 10px;
+    }
+    h1{
+      margin: 10vh auto;
+      font-size: 2.5em;
+      width: 70%;
+    }
+    p{
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+  }
+}
+
+
+@media only screen and (max-width:400px) {
+  .grid-img{
+    height: 60vh;
+    img{
+      height: 100%;
+    }
+  }
+
+  .intro-text{
+    height: 60vh;
+    h1{
+      font-size: .9em;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+    small{
+      font-size: 9px;
+    }
+  }
+
+  .wishes-container{
+    height: 100vh;
+    .wishes-text{
+      span{
+        font-size:2em;
+      }
+    }
+  }
+
+  .dummy-text{
+    p{
+      font-size: 2em;
+      font-weight: bolder;
+    }
+  }
+
+  .stuck{
+    position: relative;
+    h1{
+      font-size: 8em;
+      margin-top: 50px;
+    }
+    #pin-section{
+      p{
+        font-size: 2em;
+        position: absolute;
+        top: 36vh;
+      }
+    }
+    p{
+      font-size: 2em;
+    }
+  }
+
+  .footer{
+    height: 50vh;
+    .footer-img{
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .footer-text{
+      h1{
+        font-size: 1em;
+        margin: 0vh auto;
+      }
+      p{
+        font-size: 1em;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
